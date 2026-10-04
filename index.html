@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPACI - Gestión Ciudadana</title>
+
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <h1>COPACI</h1>
+            <p>Gestión Ciudadana</p>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#reportes">Reportes</a>
+            <a href="#solicitudes">Solicitudes</a>
+            <a href="#avisos">Avisos</a>
+        </nav>
+    </header>
+
+
+
+    <section id="inicio" class="pantalla inicio">
+
+        <div class="contenido-inicio">
+            <h2>Comité de Participación Ciudadana</h2>
+
+            <p>
+                Bienvenido al sistema digital del COPACI.
+                Aquí podrás realizar reportes, enviar solicitudes
+                y consultar avisos de interés para la comunidad.
+            </p>
+
+            <a href="#reportes" class="boton">
+                Realizar un reporte
+            </a>
+        </div>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+                <h3>Reportes</h3>
+                <p>
+                    Informa sobre problemas o situaciones
+                    que necesiten atención.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Solicitudes</h3>
+                <p>
+                    Envía solicitudes para recibir apoyo
+                    o atención del COPACI.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Avisos</h3>
+                <p>
+                    Consulta comunicados importantes
+                    para la comunidad.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="reportes" class="pantalla">
+
+        <div class="contenedor">
+
+            <h2>Registrar un reporte</h2>
+
+            <p class="descripcion">
+                Completa los siguientes datos para registrar
+                un problema o situación de tu comunidad.
+            </p>
+
+            <form>
+
+                <label>Nombre del ciudadano</label>
+                <input type="text" placeholder="Escribe tu nombre">
+
+                <label>Tipo de reporte</label>
+                <select>
+                    <option>Selecciona una opción</option>
+                    <option>Alumbrado público</option>
+                    <option>Agua</option>
+                    <option>Drenaje</option>
+                    <option>Calles</option>
+                    <option>Seguridad</option>
+                    <option>Otro</option>
+                </select>
+
+                <label>Descripción</label>
+                <textarea placeholder="Describe el problema"></textarea>
+
+                <label>Ubicación</label>
+                <input type="text" placeholder="Indica dónde ocurre">
+
+                <button type="button">
+                    Enviar reporte
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+
+
+    <section id="solicitudes" class="pantalla">
+
+        <div class="contenedor">
+
+            <h2>Realizar una solicitud</h2>
+
+            <p class="descripcion">
+                Envía una solicitud al COPACI para recibir
+                atención sobre alguna necesidad de la comunidad.
+            </p>
+
+            <form>
+
+                <label>Nombre</label>
+                <input type="text" placeholder="Escribe tu nombre">
+
+                <label>Tipo de solicitud</label>
+                <select>
+                    <option>Selecciona una opción</option>
+                    <option>Servicios públicos</option>
+                    <option>Comunidad</option>
+                    <option>Espacios públicos</option>
+                    <option>Información</option>
+                    <option>Otra</option>
+                </select>
+
+                <label>Descripción de la solicitud</label>
+                <textarea placeholder="Escribe tu solicitud"></textarea>
+
+                <button type="button">
+                    Enviar solicitud
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+
+
+    <section id="avisos" class="pantalla">
+
+        <div class="contenedor avisos">
+
+            <h2>Avisos y comunicados</h2>
+
+            <div class="aviso">
+                <h3>Reunión comunitaria</h3>
+                <p>
+                    Se invita a los ciudadanos a participar
+                    en la próxima reunión del COPACI.
+                </p>
+                <span>Información comunitaria</span>
+            </div>
+
+            <div class="aviso">
+                <h3>Mantenimiento de servicios</h3>
+                <p>
+                    Se informa a la comunidad sobre trabajos
+                    de mantenimiento en los servicios públicos.
+                </p>
+                <span>Aviso importante</span>
+            </div>
+
+            <div class="aviso">
+                <h3>Participación ciudadana</h3>
+                <p>
+                    El COPACI invita a los ciudadanos a
+                    presentar propuestas y sugerencias.
+                </p>
+                <span>Comunicado</span>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>COPACI - Sistema de Gestión Ciudadana</p>
+        <p>Participación, comunicación y atención comunitaria</p>
+    </footer>
+
+</body>
+</html>
