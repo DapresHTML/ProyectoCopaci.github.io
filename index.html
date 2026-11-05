@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Gestión Ciudadana COPACI">
+    <title>COPACI - Gestión Ciudadana</title>
+
+    <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <h1>COPACI</h1>
+            <p>Gestión Ciudadana</p>
+        </div>
+
+        <nav id="navPublico" class="nav-publico">
+            <span>Portal de atención ciudadana</span>
+        </nav>
+
+        <nav id="navPrivado" class="nav-privado oculto">
+            <span id="nombreNav" class="nombre-nav"></span>
+            <button type="button" class="boton-salir" id="btnCerrarSesion">
+                Cerrar sesión
+            </button>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+        <section id="pantallaLogin" class="pantalla-auth">
+
+            <div class="tarjeta-auth">
+
+                <div class="marca-auth">
+                    <div class="circulo-logo">C</div>
+
+                    <h2>Bienvenido a COPACI</h2>
+
+                    <p>
+                        Ingresa para acceder a los servicios
+                        de tu comunidad.
+                    </p>
+                </div>
+
+                <form id="formLogin">
+
+                    <label for="loginCorreo">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginCorreo"
+                        placeholder="correo@ejemplo.com"
+                        required
+                    >
+
+                    <label for="loginPassword">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Escribe tu contraseña"
+                        required
+                    >
+
+                    <button type="submit" class="boton-principal ancho">
+                        Iniciar sesión
+                    </button>
+
+                    <p id="mensajeLogin" class="mensaje"></p>
+
+                </form>
+
+                <div class="separador"></div>
+
+                <p class="texto-centro">
+                    ¿Aún no tienes una cuenta?
+                </p>
+
+                <button
+                    type="button"
+                    class="boton-secundario ancho"
+                    id="irRegistro"
+                >
+                    Crear cuenta ciudadana
+                </button>
+
+                <p class="nota-demo">
+                    Portal demostrativo escolar.
+                    No introduzcas contraseñas que utilices en otros sitios.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section id="pantallaRegistro" class="pantalla-auth oculto">
+
+            <div class="tarjeta-auth">
+
+                <div class="marca-auth">
+
+                    <div class="circulo-logo">C</div>
+
+                    <h2>Registro ciudadano</h2>
+
+                    <p>
+                        Completa tus datos para crear una cuenta.
+                    </p>
+
+                </div>
+
+                <form id="formRegistro">
+
+                    <label for="regNombre">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="regNombre"
+                        placeholder="Nombre y apellidos"
+                        required
+                    >
+
+                    <label for="regDireccion">
+                        Dirección o calle
+                    </label>
+
+                    <input
+                        type="text"
+                        id="regDireccion"
+                        placeholder="Tu dirección"
+                        required
+                    >
+
+                    <label for="regCorreo">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="regCorreo"
+                        placeholder="correo@ejemplo.com"
+                        required
+                    >
+
+                    <label for="regPassword">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="regPassword"
+                        minlength="6"
+                        placeholder="Mínimo 6 caracteres"
+                        required
+                    >
+
+                    <button type="submit" class="boton-principal ancho">
+                        Registrarme
+                    </button>
+
+                    <p id="mensajeRegistro" class="mensaje"></p>
+
+                </form>
+
+                <button
+                    type="button"
+                    class="enlace-boton"
+                    id="volverLogin"
+                >
+                    Volver al inicio de sesión
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <section id="pantallaApp" class="pantalla-app oculto">
+
+            <div class="bienvenida-panel">
+
+                <div>
+
+                    <p class="sobretitulo" id="rolEtiqueta">
+                        PORTAL CIUDADANO
+                    </p>
+
+                    <h2 id="tituloBienvenida">
+                        Bienvenido
+                    </h2>
+
+                    <p id="subtituloBienvenida">
+                        Desde aquí puedes utilizar los servicios del COPACI.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+            <nav id="menuCiudadano" class="menu-panel oculto">
+
+                <button type="button" data-vista="inicio" class="activo">
+                    Inicio
+                </button>
+
+                <button type="button" data-vista="reporte">
+                    Nuevo reporte
+                </button>
+
+                <button type="button" data-vista="constancia">
+                    Solicitar constancia
+                </button>
+
+                <button type="button" data-vista="mis-registros">
+                    Mis trámites y reportes
+                </button>
+
+            </nav>
+
+
+
+
+            <nav id="menuAdmin" class="menu-panel oculto">
+
+                <button type="button" data-vista="admin-inicio" class="activo">
+                    Resumen
+                </button>
+
+                <button type="button" data-vista="admin-registros">
+                    Gestionar registros
+                </button>
+
+            </nav>
+
+
+
+
+            <div id="contenidoApp" class="contenido-panel"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>COPACI - Sistema de Gestión Ciudadana</p>
+
+        <p>
+            Participación, comunicación y atención comunitaria
+        </p>
+
+    </footer>
+
+</body>
+</html>
